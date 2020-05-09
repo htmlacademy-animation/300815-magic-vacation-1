@@ -22,7 +22,7 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
-  transition: color 0.35s ease;
+  transition: color 0.5s ease;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -43,7 +43,9 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition: transform 0.35s ease, background-color 0.35s ease;
+    transition: transform 0.5s ease,
+      background-color 0.5s ease,
+      border-color 0.5s ease;
     transform-origin: center;
   }
 
@@ -54,12 +56,22 @@
     height: 2.2rem;
   }
 
-  &:hover,
   .social-block--active & {
+    color: $c-light;
+
+    &::before {
+      background-color: $c-purple;
+      border-color: $c-purple;
+    }
+  }
+
+  &:hover {
     color: $c-purple;
 
     &::before {
       transform: scale(1.125);
+      background-color: $c-light;
+      border-color: $c-light;
     }
   }
 
@@ -189,9 +201,13 @@
   border: 2px solid transparent;
   border-radius: 50%;
   opacity: 0;
-  transform: translateY(10px);
+  transform: translateY(1.2rem);
 
-  transition: opacity 0.35s, transform 0.35s, color 0.35s ease, border-color 0.35s ease, background-color 0.35s ease;
+  transition: opacity 0.35s ease,
+    transform 0.35s ease,
+    color 0.35s ease,
+    border-color 0.35s ease,
+    background-color 0.35s ease;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
