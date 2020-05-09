@@ -146,3 +146,20 @@
     }
   }
 }
+
+.screen.active {
+  .form__field {
+    animation: scale-right ease-in-out 0.7s forwards;
+  }
+}
+
+@keyframes scale-right {
+  0% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+  100% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+}
