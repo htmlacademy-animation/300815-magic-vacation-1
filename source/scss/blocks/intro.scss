@@ -162,3 +162,7 @@
     font-size: 48px;
   }
 }
+
+.screen.active .intro__message {
+  animation: fade-in-up ease 0.5s forwards;
+}
