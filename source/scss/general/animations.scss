@@ -21,3 +21,24 @@
     width: 100%;
   }
 }
+
+@keyframes slide-up {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoom-in-pulse {
+  0% {
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.125);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
