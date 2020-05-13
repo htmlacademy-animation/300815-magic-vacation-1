@@ -6,6 +6,7 @@ export default class FullPageScroll {
 
     this.screenElements = document.querySelectorAll(`.screen:not(.screen--result)`);
     this.menuElements = document.querySelectorAll(`.page-header__menu .js-menu-link`);
+    this.backgroundScreen = document.querySelector(`.js-background-screen`);
 
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
@@ -13,7 +14,7 @@ export default class FullPageScroll {
   }
 
   init() {
-    document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, {trailing: true}));
+    document.addEventListener(`wheel`, throttle(this.onScrollHandler, this.THROTTLE_TIMEOUT, {trailing: false}));
     window.addEventListener(`popstate`, this.onUrlHashChengedHandler);
 
     window.addEventListener(`load`, () => {
@@ -48,6 +49,11 @@ export default class FullPageScroll {
     });
     this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
     this.screenElements[this.activeScreen].classList.add(`active`);
+    if (this.activeScreen === 2) {
+      this.backgroundScreen.classList.add(`background-screen--visible`);
+    } else {
+      this.backgroundScreen.classList.remove(`background-screen--visible`);
+    }
   }
 
   changeActiveMenuItem() {
