@@ -1,0 +1,13 @@
+.background-screen {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  background: $c-dark;
+  transition: height 0.5s ease-in-out;
+
+  &--visible {
+    height: 100%;
+  }
+}
