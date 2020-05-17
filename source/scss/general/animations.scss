@@ -9,6 +9,17 @@
   }
 }
 
+@keyframes fade-in-left {
+  0% {
+    opacity: 0;
+    transform: translateX(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes scale-right {
   0% {
     width: 0;
@@ -40,5 +51,39 @@
   }
   100% {
     transform: scale(1);
+  }
+}
+
+@keyframes list-item-scale {
+  0% {
+    transform: scale(0);
+    color: transparent;
+  }
+  50% {
+    color: transparent;
+  }
+  100% {
+    color: inherit;
+    transform: scale(1);
+  }
+}
+
+@keyframes rules-link-scale-right {
+  0% {
+    width: 0;
+    opacity: 0;
+    color: transparent;
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    color: transparent;
+  }
+  80% {
+    width: 100%;
+  }
+  100% {
+    color: $c-dark;
   }
 }
