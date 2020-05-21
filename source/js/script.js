@@ -8,8 +8,9 @@ import chat from './modules/chat.js';
 import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
-import FullPageScroll from './modules/full-page-scroll';
+import FullPageScroll from './modules/full-page-scroll.js';
 import animationEndListener from './modules/animation-end-listener.js';
+import typographyAnimations from './modules/typography-animations.js';
 
 // init modules
 loadListener();
@@ -22,6 +23,7 @@ result();
 form();
 social();
 animationEndListener();
+typographyAnimations();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();

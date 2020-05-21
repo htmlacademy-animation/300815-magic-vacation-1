@@ -1,0 +1,15 @@
+.text__word {
+  display: inline-block;
+  margin: -2rem 0.5rem;
+  overflow: hidden;
+}
+
+.text__word > span {
+  padding-top: 2rem;
+  transform: translate3d(0, 1.106em, 0);
+  display: inline-block;
+}
+
+.text.active .text__word > span {
+  transform: translate3d(0, 0, 0);
+}
