@@ -232,9 +232,20 @@
   }
 
   &.swiper-button-disabled {
-    opacity: 0.5;
     pointer-events: none;
   }
+}
+
+.slider__control--prev {
+  animation: slide-right-with-rotate 0.4s ease-out 0.7s backwards paused;
+}
+
+.slider__control--next {
+  animation: slide-left-with-rotate 0.4s ease-out 0.7s backwards paused;
+}
+
+.screen.active .slider__control {
+  animation-play-state: running;
 }
 
 .slider__pagination.swiper-pagination {
