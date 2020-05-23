@@ -237,11 +237,11 @@
 }
 
 .slider__control--prev {
-  animation: slide-right-with-rotate 0.4s ease-out 0.7s backwards paused;
+  animation: slide-right-with-rotate 0.5s cubic-bezier(0.51, 0.16, 0.47, 1.71) 0.7s backwards paused;
 }
 
 .slider__control--next {
-  animation: slide-left-with-rotate 0.4s ease-out 0.7s backwards paused;
+  animation: slide-left-with-rotate 0.5s cubic-bezier(0.51, 0.16, 0.47, 1.71) 0.7s backwards paused;
 }
 
 .screen.active .slider__control {
