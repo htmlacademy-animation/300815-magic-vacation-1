@@ -87,3 +87,27 @@
     color: $c-dark;
   }
 }
+
+@keyframes slide-right-with-rotate {
+  0% {
+    opacity: 0;
+    transform: translateX(-4rem) rotate(-90deg);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
+
+@keyframes slide-left-with-rotate {
+  0% {
+    opacity: 0;
+    transform: translateX(4rem) rotate(90deg);
+
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) rotate(0);
+  }
+}
