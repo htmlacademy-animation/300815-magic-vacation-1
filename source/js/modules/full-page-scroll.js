@@ -54,6 +54,19 @@ export default class FullPageScroll {
     } else {
       this.backgroundScreen.classList.remove(`background-screen--visible`);
     }
+
+    if (this.activeScreen === 2) {
+      const images = document.querySelectorAll(`[data-src], [data-srcset]`);
+      for (const image of images) {
+        if (image.dataset.src) {
+          image.setAttribute(`src`, image.dataset.src);
+          image.removeAttribute(`data-src`);
+        } else {
+          image.setAttribute(`srcset`, image.dataset.srcset);
+          image.removeAttribute(`data-srcset`);
+        }
+      }
+    }
   }
 
   changeActiveMenuItem() {
